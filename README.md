@@ -13,9 +13,9 @@ A tríade:
 ├── index.html
 ├── index.js
 ├── pages
-│   ├── about.js
-│   ├── contact.js
-│   ├── education.js
+│   ├── sobre.js
+│   ├── contato.js
+│   ├── formacao.js
 │   └── portfolio.js
 ├── README.md
 └── styles.css

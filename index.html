@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Geist:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/assets/desenvolvedor.png" >
     <title>Luis Octávio Portfolio</title>
 </head>
 <body>
@@ -30,10 +31,11 @@
 
         <!-- formacao -->
         <section id="formacao">
-            <div id="portfolio-photo"></div>
-            <div id="portfolio-text">
+            <h2>Formação</h2>
+            <ul id="formacao-list">
+            
+            </ul>
 
-            </div>
         </section>
 
         <!-- portfolio -->
@@ -43,7 +45,18 @@
 
          <!-- contato -->
         <section id="contato">
+            <form id="form-contato">
+                <label class="form-label">Nome</label>
+                <input required id="name" type="text" name="name" class="form-input" />
 
+                <label class="form-label">E-mail</label>
+                <input required id="email" type="email" name="email" class="form-input"/>
+
+                <label class="form-label">Mensagem</label>
+                <textarea required id="message" name="message" cols="4" rows="6" placeholder="Coloque sua mensagem aqui..."></textarea>
+
+                <input type="submit" value="Enviar" />
+            </form>
         </section>
 
         <!-- footer  -->

@@ -86,17 +86,75 @@ body {
 
 /* Formacao */
 #formacao {
-
+    background-color: var(--third-color);
+    padding: 10px;
 }
 
 /*  Portfolio */
 #portfolio {
+    background-color: var(--third-color);
+    padding: 10px;
+}
 
+.project-div {
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: var(--main-color);
+}
+
+.project-link {
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    color: var(--fourth-color);
+    font-size: .9rem;
+}
+
+.project-link:hover {
+    color: white;
+}
+
+.project-description {
+    color: white;
+    font-size: 1rem;
 }
 
 /*  Contato */
 #contato {
+    background-color: var(--third-color);
+    box-shadow: black 0px 10px 30px -20px;
+}
 
+#form-contato {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 10px;
+}
+
+#message {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+input[type=submit] {
+    border-radius: 20px;
+    background-color: var(--second-color);
+    color: white;
+    font-size: 1rem;
+    height: 40px;
+    cursor: pointer;
+    width: 120px;
+    transition: background-color 0.2s ease;
+}
+
+input[type=submit]:hover {
+    background-color: var(--main-color);
 }
 
 /* classes */
@@ -106,6 +164,27 @@ body {
     color: var(--main-color);
     font-weight: 600;
 }
+
+.form-label {
+    font-size: 1rem; 
+    color: white; 
+    font-weight: 600;
+}
+
+.form-input { 
+    border-radius: 20px; 
+    padding: 10px;
+}
+
+.form-input:invalid {
+    border: 2px solid red;
+}
+
+.form-input:valid {
+    border: 2px solid green;
+}
+
+
 
 #footer {
     height: 50px;

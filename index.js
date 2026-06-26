@@ -1,40 +1,22 @@
-const profileImages = [
-    'me.png',
-    'me-2.jpg'
-];
+import { loadPortfolio } from "./pages/portfolio.js";
+import { initSlideShow } from "./pages/sobre.js";
+import { sendForm } from "./pages/contato.js";
+import { loadFormacao } from "./pages/formacao.js";
 
-let indexImg = 0;
+
 
 function main() {
-    const sobre = document.querySelector("#sobre");
-
-    changeImage();
-
     initSlideShow();
+
+    loadPortfolio();
+    loadFormacao();
+
+    const form = document.querySelector("#form-contato");
+
+    form.addEventListener('submit', (event) => {
+        sendForm(event)
+        form.reset();
+    });
 }
 
-function initSlideShow() {
-    setInterval(changeImage, 3000);
-}
-
-function changeImage() {
-    const profilePhoto = document.querySelector("#profile-photo");
-
-    indexImg = (indexImg + 1) % profileImages.length; 
-
-    const path = `assets/${profileImages[indexImg]}`;
-
-    profilePhoto.style.transition = 'opacity 0.4s ease';
-    profilePhoto.style.opacity = '0';
-
-    setTimeout(() => {
-        profilePhoto.src = path; 
-
-        void profilePhoto.offsetHeight; 
-
-        profilePhoto.style.opacity = '1';
-    }, 400)
-}    
-
-
-main();
+document.addEventListener('DOMContentLoaded', main);

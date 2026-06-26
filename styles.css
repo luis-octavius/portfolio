@@ -7,6 +7,7 @@ body {
     margin: 0; 
     border: 0;
     min-height: 100vh;
+    font-family: monospace;
 }
 
 #container {
@@ -14,34 +15,96 @@ body {
     display: flex; 
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 200px;
 }
 
-#navbar, #current, #footer {
+#navbar, #sobre, #formacao, #portfolio, #contato, #footer {
     width: 80%;
     border-radius: 20px;
     border: 1px solid black;
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgb(44, 53, 70) 0px 5px 5px 0px;
 }
 
 #navbar {
-    margin-top: -15px;
     background-color: var(--second-color);
     color: white;
     font-weight: bold;
-}
-
-#navbar > ul {
-    margin-top: 25px;
     list-style: none;
     display: flex;
+    margin-top: -40px;
     cursor: pointer;
     justify-content: space-around;
+    height: 80px;
+    align-items: center;
+    border-radius: 50px;
+    font-family: "Oswald", sans-serif;
+    transition: scale 0.5 ease-in-out;
 }
 
-#current {
-    background: white;
-    min-height: 100vh;
+#navbar > a {
+    margin-top: 30px;
+    text-decoration: none;
+    color: white;
+}
+
+#navbar > a:hover {
+    transform: scale(1.2);
+}
+
+/* Sobre */
+#sobre {
+    display: flex;
+    background-color: var(--third-color);
+    gap: 10px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#sobre > * {
+    margin: 20px;
+}
+
+#profile-photo {
+    height: 300px;
+    width: 300px;
+    min-width: 300px; 
+    min-height: 300px;
+    border-radius: 20%;
+    border: 1px solid var(--main-color);
+    object-fit: cover;
+    object-position: center;
+    transition: opacity 1.0 ease-in-out;
+}
+
+#profile-photo.fading {
+    opacity: 0; 
+}
+
+#sobre > p {
+    padding-top: 15px;
+}
+
+/* Formacao */
+#formacao {
+
+}
+
+/*  Portfolio */
+#portfolio {
+
+}
+
+/*  Contato */
+#contato {
+
+}
+
+/* classes */
+.main-text {
+    font-size: .9rem;
+    text-align: justify;
+    color: var(--main-color);
+    font-weight: 600;
 }
 
 #footer {
@@ -49,5 +112,4 @@ body {
     text-align: center;
     color: white;
     background-color: var(--second-color);
-    font-family: monospace;
 }

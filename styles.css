@@ -87,7 +87,33 @@ body {
 /* Formacao */
 #formacao {
     background-color: var(--third-color);
-    padding: 10px;
+    padding: 20px;
+}
+
+#formacao > h2 {
+    font-size: 1.2rem;
+    text-decoration:underline;
+    color: white;
+}
+
+#formacao-list {
+    padding: 0;
+}
+
+
+.formacao-item {
+    list-style: none; 
+    color: var(--main-color);
+    line-height: 2rem;
+}
+
+.institute {
+    font-style: italic;
+    color: white;
+}
+
+.year {
+   color: var(--main-color) 
 }
 
 /*  Portfolio */
@@ -191,4 +217,41 @@ input[type=submit]:hover {
     text-align: center;
     color: white;
     background-color: var(--second-color);
+    width: 100%;
+    border-radius: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+@media screen and (max-width: 600px), (max-height: 500px) {
+    #navbar, #footer {
+       font-size: .7rem; 
+    }
+
+    #sobre {
+        flex-direction: column;
+    }
+    
+    #profile-photo {
+        min-width: fit-content;
+        min-height: fit-content;
+        height: 200px;
+        width: 200px;
+    }
+    
+    #formacao > ul > * {
+        font-size: 0.8rem;
+    }
+    
+    .project-div {
+        font-size: .8rem;
+    }
+    
+    .project-title {
+        font-size: .9rem;
+    }
+    
+    .project-description {
+        font-size: .8rem;
+    }
 }

@@ -39,16 +39,18 @@ function createListEl(course) {
     const spanYear = document.createElement("span");
 
     spanInst.classList.add("institute");
-    spanInst.textContent = course.institute;
+    spanInst.textContent = `${course.institute} - `;
 
     spanYear.classList.add("year");
     spanYear.textContent = `${course.year}`;
-
+    
     item.classList.add("formacao-item");
-    item.append(spanInst);
-    item.append(spanYear);
 
-    item.textContent = `${course.name} - `
+    item.appendChild(spanInst);
+    item.appendChild(spanYear);
+
+    const textNode = document.createTextNode(`${course.name} - `);
+    item.insertBefore(textNode, item.firstChild);
 
     return item;
 }

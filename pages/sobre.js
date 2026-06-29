@@ -16,7 +16,7 @@ function changeImage() {
 
     indexImg = (indexImg + 1) % profileImages.length; 
 
-    const path = `../assets/${profileImages[indexImg]}`;
+    const path = `assets/${profileImages[indexImg]}`;
 
     profilePhoto.style.transition = 'opacity 0.4s ease';
     profilePhoto.style.opacity = '0';
